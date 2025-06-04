@@ -17,9 +17,9 @@ services:
       - mongo
 
   frontend:
-    image: booboo531/chat-client   # <-- image của bạn, nhớ build và push lên DockerHub
+    image: booboo531/chat-client  
     container_name: chat-client
     ports:
-      - "3000:80"                    # map port: client dùng localhost:3000
+      - "3000:80"         
     depends_on:
       - server
