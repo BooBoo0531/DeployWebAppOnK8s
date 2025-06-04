@@ -29,10 +29,10 @@ app.use("/api/message", messageRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5000;
 
 const server = app.listen(PORT, () => {
-  console.log("listening on port 8080");
+  console.log(`listening on port ${PORT}`);
 });
 
 // server.prependListener("request", (req, res) => {

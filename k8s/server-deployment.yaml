@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chat-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chat-server
+  template:
+    metadata:
+      labels:
+        app: chat-server
+    spec:
+      containers:
+      - name: chat-server
+        image: booboo531/chat-server:v1
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MONGO_URL
+          value: "mongodb://mongo:27017/chatdb"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: chat-server
+spec:
+  selector:
+    app: chat-server
+  ports:
+  - port: 5000
+    targetPort: 5000
+  type: ClusterIP
