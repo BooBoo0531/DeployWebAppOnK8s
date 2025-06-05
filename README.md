@@ -8,11 +8,12 @@
 
 
 ## 👥 Team Members
-| No. | Full Name      | Student ID | Role                          |
-|-----|----------------|------------|-------------------------------|
-| 1   | Đỗ Hồng Ngân   | 23520994    | Backend design & deployment   |
-| 2   | Võ Thị Hồng Phúc     | 23521226    | Kubernetes setup & YAML files |
-| 3   | Huỳnh Thị Phương Nghi       | 23521001    | Frontend deployment & demo    |
+
+| No. | Full Name               | Student ID | Responsibilities |
+|-----|-------------------------|------------|------------------|
+| 1   | Đỗ Hồng Ngân            | 23520994   | - Pushed Docker images to Docker Hub<br>- Deployed the entire system to Google Kubernetes Engine (GKE)<br>- Recorded and presented the live demo |
+| 2   | Võ Thị Hồng Phúc        | 23521226   | - Wrote optimized Dockerfiles for both frontend (React) and backend (Express)<br>- Built and tested Docker images locally<br>- Ensured images worked correctly before deployment |
+| 3   | Huỳnh Thị Phương Nghi   | 23521001   | - Wrote Kubernetes manifests: Deployments, Services, ConfigMaps for all services<br>- Implemented Ingress to expose the application publicly<br>- Debugged deployment issues in the cluster |
 
 
 
@@ -20,6 +21,8 @@
 🔗 Original source: [MERN Chat App Source](https://github.com/Nandudumare/MERN-CHAT-APP)
 
 🛠️ This repository: Modified and extended to include Kubernetes YAML files for deploying the app (locally via Minikube or on the cloud).
+
+
 
 ## 🧱 Directory Structure
 
@@ -38,6 +41,9 @@
 ├── docker-compose.yml      # Local environment setup for quick testing
 └── README.md
 ```
+
+
+
 ## ⚙️ Deployment Steps
 
 ### 1. Clone the Repository
@@ -54,6 +60,9 @@ minikube start
 ```bash
 kubectl apply -f k8s/
 ````
+
+
+
 ## 🌐 Accessing the Application
 ### With Minikube
 ```bash
@@ -62,10 +71,13 @@ minikube service chat-client
 ### With Ingress
 Configure DNS and update your /etc/hosts file to access the app via a domain name.
 
+
+
 ## 👏 Credits
 
 - Original App: [@Nandudumare](https://github.com/Nandudumare)
 - Kubernetes Deployment: Implemented by **Group 14**, course **NT132.P21 - Network and System Administration**, **University of Information Technology – VNU-HCM (UIT)**
+
 
 
 ## 📄 License
