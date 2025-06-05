@@ -63,9 +63,6 @@ minikube service chat-client
 Configure DNS and update your /etc/hosts file to access the app via a domain name.
 
 ## 👏 Credits
-Original App: @Nandudumare
-
-## 👏 Credits
 
 - Original App: [@Nandudumare](https://github.com/Nandudumare)
 - Kubernetes Deployment: Implemented by **Group 14**, course **NT132.P21 - Network and System Administration**, **University of Information Technology – VNU-HCM (UIT)**
